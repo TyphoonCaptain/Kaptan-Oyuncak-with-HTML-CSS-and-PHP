@@ -1,0 +1,15 @@
+RewriteEngine On
+
+RewriteRule ^tag/([^/]*)\.html$ etiket.php?seo=$1 [L]
+RewriteRule ^hizmet/(.*)/([^/]*)$ service.php?id=$1&seo=$2 [L]
+RewriteRule ^yazi/(.*)/([^/]*)$ content.php?id=$1&seo=$2 [L]
+RewriteRule ^kategori/(.*)/([^/]*)$ category.php?id=$1&seo=$2 [L]
+RewriteRule ^urun/(.*)/([^/]*)$ product.php?id=$1&seo=$2 [L]
+RewriteRule ^referans/(.*)/([^/]*)$ showref.php?id=$1&seo=$2 [L]
+RewriteRule ^duyuru/(.*)/([^/]*)$ anons.php?id=$1&seo=$2 [L]
+RewriteRule ^proje/(.*)/([^/]*)$ showpro.php?id=$1&seo=$2 [L]
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
